@@ -32,21 +32,23 @@
 #define IS_LITTLE_ENDIAN   1234 /* byte 0 is least significant (i386) */
 
 /* Include files where endian defines and byteswap functions may reside */
-#if defined( __sun )
-#  include <sys/isa_defs.h>
-#elif defined( __FreeBSD__ ) || defined( __OpenBSD__ ) || defined( __NetBSD__ )
-#  include <sys/endian.h>
-#elif defined( BSD ) && ( BSD >= 199103 ) || defined( __APPLE__ ) || \
-      defined( __CYGWIN32__ ) || defined( __DJGPP__ ) || defined( __osf__ )
-#  include <machine/endian.h>
-#elif defined( __linux__ ) || defined( __GNUC__ ) || defined( __GNU_LIBRARY__ )
-#  if !defined( __MINGW32__ ) && !defined( _AIX )
-#    include <endian.h>
-#    if !defined( __BEOS__ )
-#      include <byteswap.h>
-#    endif
-#  endif
-#endif
+//#if defined( __sun )
+//#  include <sys/isa_defs.h>
+//#elif defined( __FreeBSD__ ) || defined( __OpenBSD__ ) || defined( __NetBSD__ )
+//#  include <sys/endian.h>
+//#elif defined( BSD ) && ( BSD >= 199103 ) || defined( __APPLE__ ) || \
+//      defined( __CYGWIN32__ ) || defined( __DJGPP__ ) || defined( __osf__ )
+//#  include <machine/endian.h>
+//#elif defined( __linux__ ) || defined( __GNUC__ ) || defined( __GNU_LIBRARY__ )
+//#  if !defined( __MINGW32__ ) && !defined( _AIX )
+//#    include <endian.h>
+//#    if !defined( __BEOS__ )
+//#      include <byteswap.h>
+//#    endif
+//#  endif
+//#endif
+
+#include <sys/param.h>
 
 /* Now attempt to set the define for platform byte order using any  */
 /* of the four forms SYMBOL, _SYMBOL, __SYMBOL & __SYMBOL__, which  */

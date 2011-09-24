@@ -7,6 +7,9 @@ QT += xml
 DEPENDPATH += crypto dialogs export forms import lib translations res
 INCLUDEPATH += . lib crypto plugins/interfaces export import dialogs
 
+QMAKE_LFLAGS += '-Wl,-rpath,\'./app/native/lib\''
+LIBS += -L$$[QT_INSTALL_PLUGINS]/platforms -lQtOpenGL -lplaybooksupport
+
 MOC_DIR = ../build/moc
 UI_DIR = ../build/ui
 OBJECTS_DIR = ../build
@@ -36,12 +39,12 @@ win32 : QMAKE_WIN32 = 1
 #-------------------------------------------------------------------------------
 unix : !macx : !isEqual(QMAKE_WIN32,1){
 	isEmpty(PREFIX): PREFIX = /usr
-	!isEqual(AUTOTYPE,0){
-		DEFINES += AUTOTYPE
-		!isEqual(GLOBAL_AUTOTYPE,0){
-			DEFINES += GLOBAL_AUTOTYPE
-		}
-	}
+#	!isEqual(AUTOTYPE,0){
+#		DEFINES += AUTOTYPE
+#		!isEqual(GLOBAL_AUTOTYPE,0){
+#			DEFINES += GLOBAL_AUTOTYPE
+#		}
+#	}
 	TARGET = ../bin/keepassx
 	target.path = $${PREFIX}/bin
 	datai18n.files = ../share/keepassx/i18n/*.qm

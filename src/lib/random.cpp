@@ -57,7 +57,7 @@ quint32 randintRange(quint32 min, quint32 max){
 	return min + randint(max-min+1);
 }
 
-#if defined(Q_WS_X11) || defined(Q_WS_MAC)
+#if defined(Q_WS_X11) || defined(Q_WS_MAC) || defined(Q_WS_QPA)
 
 extern bool getNativeEntropy(quint8* buffer, int length) {
 	QFile dev_urandom("/dev/urandom");

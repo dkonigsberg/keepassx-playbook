@@ -29,6 +29,8 @@
 #include "plugins/interfaces/IKdeInit.h"
 #include "plugins/interfaces/IGnomeInit.h"
 
+#include <QtCore/QCoreApplication>
+
 //#include <QPluginLoader>
 #include <iostream>
 
@@ -49,6 +51,7 @@ IIconTheme* IconLoader=NULL;
 
 int main(int argc, char **argv)
 {
+	QCoreApplication::addLibraryPath("app/native/lib");
 	setlocale(LC_CTYPE, "");
 	
 #if defined(Q_WS_X11) && defined(AUTOTYPE)
@@ -61,10 +64,14 @@ int main(int argc, char **argv)
 	
 	QApplication::setQuitOnLastWindowClosed(false);
 	
-	AppDir = QApplication::applicationFilePath();
-	AppDir.truncate(AppDir.lastIndexOf("/"));
-#if defined(Q_WS_X11)
-	DataDir = AppDir+"/../share/keepassx";
+	//AppDir = QApplication::applicationFilePath();
+	//AppDir.truncate(AppDir.lastIndexOf("/"));
+	
+	AppDir = QDir::currentPath() + "/app/native";
+	
+//#if defined(Q_WS_X11)
+	//DataDir = AppDir+"/../share/keepassx";
+	DataDir = AppDir + "/share/keepassx";
 	if (!QFile::exists(DataDir) && QFile::exists(AppDir+"/share"))
 		DataDir = AppDir+"/share";
 	const char* env = getenv("XDG_CONFIG_HOME");
@@ -79,18 +86,18 @@ int main(int argc, char **argv)
 			HomeDir = QDir::homePath() + '/' + qenv;
 	}
 	HomeDir += "/keepassx";
-#elif defined(Q_WS_MAC)
-	HomeDir = QDir::homePath()+"/.keepassx";
-	DataDir = AppDir+"/../Resources/keepassx";
-#else //Q_WS_WIN
-	HomeDir = qtWindowsConfigPath(CSIDL_APPDATA);
-	if(!HomeDir.isEmpty() && QFile::exists(HomeDir))
-		HomeDir = QDir::fromNativeSeparators(HomeDir)+"/KeePassX";
-	else
-		HomeDir = QDir::homePath()+"/KeePassX";
-	
-	DataDir = AppDir+"/share";
-#endif
+//#elif defined(Q_WS_MAC)
+//	HomeDir = QDir::homePath()+"/.keepassx";
+//	DataDir = AppDir+"/../Resources/keepassx";
+//#else //Q_WS_WIN
+//	HomeDir = qtWindowsConfigPath(CSIDL_APPDATA);
+//	if(!HomeDir.isEmpty() && QFile::exists(HomeDir))
+//		HomeDir = QDir::fromNativeSeparators(HomeDir)+"/KeePassX";
+//	else
+//		HomeDir = QDir::homePath()+"/KeePassX";
+//	
+//	DataDir = AppDir+"/share";
+//#endif
 	DataDir = QDir::cleanPath(DataDir);
 	
 	CmdLineArgs args;
