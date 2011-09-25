@@ -1,0 +1,15 @@
+Makefile*
+*.pro.user*
+.moc
+.obj
+*.o
+*.a
+*.la
+*.so
+*.so.*
+moc_*.cpp
+ui_*.h
+.DS_Store
+bin/
+build/
+*.bar
