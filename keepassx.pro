@@ -32,7 +32,7 @@ package.depends = bin/keepassx
 package.commands = find share/ -type f > .share.list && \
     blackberry-nativepackager \
     -devMode -debugToken ~/debugToken.bar \
-    -package keepassx.bar -arg -platform -arg PlayBook \
+    -package keepassx.bar -arg -platform -arg blackberry \
     blackberry-tablet.xml \
     -e bin/keepassx keepassx \
     -e $$[QT_INSTALL_LIBS]/libQtCore.so.4 lib/libQtCore.so.4 \
@@ -40,8 +40,8 @@ package.commands = find share/ -type f > .share.list && \
     -e $$[QT_INSTALL_LIBS]/libQtOpenGL.so.4 lib/libQtOpenGL.so.4 \
     -e $$[QT_INSTALL_LIBS]/libQtNetwork.so.4 lib/libQtNetwork.so.4 \
     -e $$[QT_INSTALL_LIBS]/libQtXml.so.4 lib/libQtXml.so.4 \
-    -e $$[QT_INSTALL_LIBS]/libplaybooksupport.so.1 lib/libplaybooksupport.so.1 \
-    -e $$[QT_INSTALL_PLUGINS]/platforms/libqplaybook.so lib/platforms/libqplaybook.so \
+    -e $$[QT_INSTALL_LIBS]/libbbsupport.so.4 lib/libbbsupport.so.4 \
+    -e $$[QT_INSTALL_PLUGINS]/platforms/libblackberry.so lib/platforms/libblackberry.so \
     @.share.list && \
     rm .share.list
 

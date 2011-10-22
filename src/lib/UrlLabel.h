@@ -21,6 +21,8 @@
 #ifndef _LINKLABEL_H_
 #define _LINKLABEL_H_
 
+#include "keepassx.h"
+
 class LinkLabel : public QLabel{
 	Q_OBJECT
 	

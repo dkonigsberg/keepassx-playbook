@@ -18,9 +18,10 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
+#include "keepassx.h"
 
 #include "CalendarDlg.h"
- 
+
 CalendarDialog::CalendarDialog(QWidget* parent, const QDate& Start):QDialog(parent){
 	setupUi(this);
 	calendarWidget->setSelectedDate(Start);

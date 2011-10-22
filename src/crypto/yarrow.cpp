@@ -36,6 +36,8 @@
 #include <stdio.h>
 #endif
 
+#include "keepassx.h"
+
 #define SHA256_DIGEST_SIZE 32
 #define AES_MAX_KEY_SIZE 32
 

@@ -21,6 +21,8 @@
 #ifndef _AUTOTYPE_H_
 #define _AUTOTYPE_H_
 
+#include "keepassx.h"
+
 class KeepassMainWindow;
 void initAutoType(KeepassMainWindow* mainWin);
 

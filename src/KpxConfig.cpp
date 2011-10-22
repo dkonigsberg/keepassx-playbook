@@ -22,6 +22,7 @@
  ***************************************************************************/
 
 #include <QLayout>
+#include "keepassx.h"
 
 KpxConfig::KpxConfig(const QString& filePath) : settings(filePath,QSettings::IniFormat){
 	configFile=filePath;

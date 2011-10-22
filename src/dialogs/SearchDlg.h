@@ -20,6 +20,7 @@
 #ifndef SEARCHDLG_H
 #define SEARCHDLG_H
 
+#include "keepassx.h"
 #include "ui_SearchDlg.h"
 
 class SearchDialog : public QDialog, private Ui_Search_Dlg

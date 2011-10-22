@@ -175,6 +175,7 @@
 #include <cstdlib>
 #include "twofish.h"
 
+#include "keepassx.h"
 
 /*
  * PLATFORM FIXES

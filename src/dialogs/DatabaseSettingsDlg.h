@@ -21,6 +21,7 @@
 #ifndef DBSETTINGSDLG_H
 #define DBSETTINGSDLG_H
 
+#include "keepassx.h"
 #include "ui_DatabaseSettingsDlg.h"
 
 class CDbSettingsDlg : public QDialog, private Ui_DatabaseSettingsDlg

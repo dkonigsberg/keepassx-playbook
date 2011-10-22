@@ -22,6 +22,8 @@
 	#include <QDesktopServices>
 #endif
 
+#include "keepassx.h"
+
 IFileDialog* KpxFileDialogs::iFileDialog=NULL;
 QtStandardFileDialogs DefaultQtDlgs;
 FileDlgHistory fileDlgHistory;

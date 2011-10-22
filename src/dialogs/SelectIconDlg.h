@@ -21,6 +21,7 @@
 #ifndef _SELECT_ICON_DLG_
 #define _SELECT_ICON_DLG_
 
+#include "keepassx.h"
 #include "ui_SelectIconDlg.h"
 
 class CSelectIconDlg:public QDialog, private Ui_SelectIconDlg{

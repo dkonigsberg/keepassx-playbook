@@ -20,6 +20,8 @@
 #ifndef _IMPORT_H_
 #define _IMPORT_H_
  
+#include "keepassx.h"
+
 class IImport{
 	public:
 		virtual ~IImport(){};

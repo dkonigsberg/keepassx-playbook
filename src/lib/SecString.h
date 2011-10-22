@@ -23,6 +23,7 @@
 #include "crypto/arcfour.h"
 
 class SecData;
+class CArcFour;
 
 //! QString based class with in-memory encryption of its content.
 /*!

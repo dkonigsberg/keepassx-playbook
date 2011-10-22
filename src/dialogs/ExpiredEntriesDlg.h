@@ -21,6 +21,7 @@
 #ifndef _EXP_ENTRIES_DLG_
 #define _EXP_ENTRIES_DLG_
 
+#include "keepassx.h"
 #include "ui_ExpiredEntriesDlg.h"
 
 

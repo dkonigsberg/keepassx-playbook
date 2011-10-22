@@ -20,6 +20,8 @@
 #ifndef SHORTCUT_WIDGET_H
 #define SHORTCUT_WIDGET_H
 
+#include "keepassx.h"
+
 
 #if defined(GLOBAL_AUTOTYPE) && defined(Q_WS_X11)
 #include "lib/AutoType.h"

@@ -21,6 +21,8 @@
 #ifndef _DATABASE_H_
 #define _DATABASE_H_
 
+#include "keepassx.h"
+
 extern const QDateTime Date_Never;
 
 enum CryptAlgorithm{

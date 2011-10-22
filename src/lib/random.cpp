@@ -19,7 +19,7 @@
  ***************************************************************************/
 
 #include "random.h"
-
+#include "keepassx.h"
 
 #if defined(Q_WS_X11) || defined(Q_WS_MAC)
 	#include <QFile>
@@ -33,6 +33,9 @@
 #include <QCursor>
 #include <QDataStream>
 #include <QTime>
+#include <process.h>
+
+#include "keepassx.h"
 
 void initStdRand();
 bool getNativeEntropy(quint8* buffer, int length);

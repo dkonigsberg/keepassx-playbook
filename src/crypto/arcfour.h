@@ -19,6 +19,8 @@
 #ifndef _ARCFOUR_H_
 #define _ARCFOUR_H_
 
+#include "keepassx.h"
+
 class CArcFour{
 	public:
 		void encrypt(const quint8* src, quint8* dst, uint length);

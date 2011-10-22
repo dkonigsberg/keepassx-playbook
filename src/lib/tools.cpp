@@ -31,6 +31,8 @@
 	#include <io.h>
 #endif
 
+#include "keepassx.h"
+
 void createBanner(QPixmap* Pixmap,const QPixmap* IconAlpha,const QString& Text,int Width){
 	createBanner(Pixmap,IconAlpha,Text,Width,config->bannerColor1(),config->bannerColor2(),config->bannerTextColor());
 }

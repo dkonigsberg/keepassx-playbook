@@ -8,7 +8,7 @@ DEPENDPATH += crypto dialogs export forms import lib translations res
 INCLUDEPATH += . lib crypto plugins/interfaces export import dialogs
 
 QMAKE_LFLAGS += '-Wl,-rpath,\'./app/native/lib\''
-LIBS += -L$$[QT_INSTALL_PLUGINS]/platforms -lQtOpenGL -lplaybooksupport
+LIBS += -L$$[QT_INSTALL_PLUGINS]/platforms -lQtOpenGL -lbbsupport
 
 MOC_DIR = ../build/moc
 UI_DIR = ../build/ui
@@ -318,13 +318,13 @@ SOURCES += main.cpp \
            export/Export_KeePassX_Xml.cpp \
            export/Export_Txt.cpp
 
-isEqual(PRECOMPILED,0) {
-	QMAKE_CXXFLAGS += -include keepassx.h
-}
-else {
-	CONFIG += precompile_header
-	PRECOMPILED_HEADER = keepassx.h
-}
+#isEqual(PRECOMPILED,0) {
+#        QMAKE_CXXFLAGS += -include keepassx.h
+#}
+#else {
+#        CONFIG += precompile_header
+#        PRECOMPILED_HEADER = keepassx.h
+#}
 
 RESOURCES += res/resources.qrc
 

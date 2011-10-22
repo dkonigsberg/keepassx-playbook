@@ -21,6 +21,7 @@
 #define _STD_DATABASE_H_
 
 #include <QThread>
+#include "keepassx.h"
 
 #define DB_HEADER_SIZE	124
 #define PWM_DBSIG_1		0x9AA2D903

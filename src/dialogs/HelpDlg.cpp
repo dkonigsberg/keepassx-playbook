@@ -1,4 +1,5 @@
 
+#include "keepassx.h"
 #include "HelpDlg.h"
 
 HelpDlg::HelpDlg(QWidget* parent) : QDialog(parent) {

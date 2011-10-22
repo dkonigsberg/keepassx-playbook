@@ -20,6 +20,7 @@
 #ifndef _FILE_DIALOGS_H_
 #define _FILE_DIALOGS_H_
 
+#include "keepassx.h"
 #include "plugins/interfaces/IFileDialog.h"
 
 

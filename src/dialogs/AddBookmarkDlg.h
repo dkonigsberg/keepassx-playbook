@@ -21,6 +21,7 @@
 #define _ADDBOOKMARKDLG_H_
 
 #include "ui_AddBookmarkDlg.h"
+#include "keepassx.h"
 
 class AddBookmarkDlg : public QDialog, private Ui::AddBookmarkDlg
 {

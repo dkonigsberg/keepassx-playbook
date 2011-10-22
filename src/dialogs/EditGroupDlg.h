@@ -21,6 +21,7 @@
 #ifndef EDITGROUPDLG_H
 #define EDITGROUPDLG_H
 
+#include "keepassx.h"
 #include "ui_EditGroupDlg.h"
 
 class CEditGroupDialog : public QDialog, private Ui_EditGroupDialog
