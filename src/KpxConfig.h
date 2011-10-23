@@ -100,7 +100,7 @@ public:
 	bool showStatusbar(){return settings.value("UI/ShowStatusbar",true).toBool();}
 	bool showSysTrayIcon(){return settings.value("Options/ShowSysTrayIcon",false).toBool();}
 	bool showToolbar(){return settings.value("UI/ShowToolbar",true).toBool();}
-	int toolbarIconSize(){return settings.value("UI/ToolbarIconSize",16).toInt();}
+        int toolbarIconSize(){return settings.value("UI/ToolbarIconSize",28).toInt();}
 	QString urlCmd(){return settings.value("Options/UrlCmd").toString();}
 	bool urlCmdDef(){return settings.value("Options/UrlCmdDef",true).toBool();}
 	QByteArray vSplitterPos(){return settings.value("UI/VSplitterPos").toByteArray();}

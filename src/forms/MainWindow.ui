@@ -34,6 +34,11 @@
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
        <property name="acceptDrops">
         <bool>true</bool>
        </property>
@@ -69,6 +74,11 @@
           <verstretch>70</verstretch>
          </sizepolicy>
         </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
         <property name="selectionMode">
          <enum>QAbstractItemView::ExtendedSelection</enum>
         </property>
@@ -95,6 +105,11 @@
           <height>30</height>
          </size>
         </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
         <property name="readOnly">
          <bool>true</bool>
         </property>
@@ -113,8 +128,15 @@
      <x>0</x>
      <y>0</y>
      <width>724</width>
-     <height>24</height>
+     <height>34</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
    </property>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
