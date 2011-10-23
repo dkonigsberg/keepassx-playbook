@@ -43,6 +43,8 @@
 #include "dialogs/ManageBookmarksDlg.h"
 #include "dialogs/HelpDlg.h"
 
+#include <bbsupport/Navigator>
+
 Import_KeePassX_Xml import_KeePassX_Xml;
 Import_PwManager import_PwManager;
 Import_KWalletXml import_KWalletXml;
@@ -215,6 +217,8 @@ void KeepassMainWindow::setupConnections(){
 	connect(DetailView,SIGNAL(anchorClicked(const QUrl&)),this,SLOT(OnDetailViewUrlClicked(const QUrl&)));
 	connect(WorkspaceLockedWidget.Button_Unlock,SIGNAL(clicked()),this,SLOT(OnUnLockWorkspace()));
 	connect(WorkspaceLockedWidget.Button_CloseDatabase,SIGNAL(clicked()),this,SLOT(OnLockClose()));
+
+        connect(&BlackBerry::Navigator::instance(), SIGNAL(notifyExit()), SLOT(OnFileExit()));
 }
 
 void KeepassMainWindow::setupToolbar(){
