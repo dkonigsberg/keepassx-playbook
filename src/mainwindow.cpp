@@ -20,6 +20,7 @@
 #include <QPointer>
 #include <QToolBar>
 #include <QStatusBar>
+#include <QDesktopWidget>
 #include "mainwindow.h"
 #include "lib/AutoType.h"
 #include "import/Import_PwManager.h"
@@ -70,9 +71,9 @@ KeepassMainWindow::KeepassMainWindow(const QString& ArgFile,bool ArgMin,bool Arg
 	autoType->registerGlobalShortcut(config->globalShortcut());
 #endif
 	setWindowModified(false);
-	QByteArray windowGeo = config->mainWindowGeometry();
-	if (!windowGeo.isEmpty())
-		restoreGeometry(windowGeo);
+
+        setGeometry(QApplication::desktop()->screenGeometry());
+
 	VSplitter->restoreState(config->vSplitterPos());
 	HSplitter->restoreState(config->hSplitterPos());
 	SysTray=new QSystemTrayIcon(this);
@@ -137,7 +138,7 @@ KeepassMainWindow::KeepassMainWindow(const QString& ArgFile,bool ArgMin,bool Arg
 	createBookmarkActions();
 	
 	if (showWindow)
-		show();
+                showFullScreen();
 	else if (!config->showSysTrayIcon())
 		showMinimized();
 }
