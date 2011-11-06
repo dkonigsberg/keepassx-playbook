@@ -22,18 +22,22 @@ SUBDIRS += src
 #!contains(INT_PLUGINS,gtk) {
 #	message("Build Gnome Plugin: no")
 #}
-message("Install Prefix:" $$PREFIX)
+
+OTHER_FILES = bar-descriptor.xml
+
+#message("Install Prefix:" $$PREFIX)
 #message("KDE Prefix:" $$KDEDIR)
-message("*** Makefile successfully generated.")
-message("*** Start make now.")
+#message("*** Makefile successfully generated.")
+#message("*** Start make now.")
 
 package.target = keepassx.bar
 package.depends = bin/keepassx
 package.commands = find share/ -type f > .share.list && \
     blackberry-nativepackager \
-    -devMode -debugToken ~/debugToken.bar \
+    -devMode \
+    -debugToken ~/.rim/debugtoken1.bar \
     -package keepassx.bar -arg -platform -arg blackberry \
-    blackberry-tablet.xml \
+    bar-descriptor.xml \
     -e bin/keepassx keepassx \
     -e $$[QT_INSTALL_LIBS]/libQtCore.so.4 lib/libQtCore.so.4 \
     -e $$[QT_INSTALL_LIBS]/libQtGui.so.4 lib/libQtGui.so.4 \

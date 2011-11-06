@@ -7,7 +7,6 @@ QT += xml
 DEPENDPATH += crypto dialogs export forms import lib translations res
 INCLUDEPATH += . lib crypto plugins/interfaces export import dialogs
 
-QMAKE_LFLAGS += '-Wl,-rpath,\'./app/native/lib\''
 LIBS += -L$$[QT_INSTALL_PLUGINS]/platforms -lQtOpenGL -lbbsupport
 
 MOC_DIR = ../build/moc
@@ -199,7 +198,8 @@ TRANSLATIONS = $$TRANSLATIONS_KX $$TRANSLATIONS_DISABLED translations/keepassx-x
 #TRANSLATIONS_UPDATE = $$TRANSLATIONS_KX $$TRANSLATIONS_DISABLED translations/keepassx-xx_XX.ts
 #TRANSLATIONS_COMPILE = $$TRANSLATIONS_KX $$TRANSLATIONS_QT
 
-HEADERS += main.h \
+HEADERS += keepassx.h \
+           main.h \
            mainwindow.h \
            KpxConfig.h \
            Database.h \
