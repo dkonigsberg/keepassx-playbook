@@ -21,10 +21,13 @@
 #include <QHeaderView>
 #include <QClipboard>
 #include <QProcess>
+#include <QScrollBar>
 #include <algorithm>
 #include "lib/AutoType.h"
 #include "lib/EntryView.h"
 #include "dialogs/EditEntryDlg.h"
+#include "lib/qtscroller.h"
+#include "lib/qtscrollerproperties.h"
 
 #define NUM_COLUMNS 11
 
@@ -54,6 +57,11 @@ KeepassEntryView::KeepassEntryView(QWidget* parent) : QTreeWidget(parent) {
 
 	/*pItems=&Items;
 	pEntryView=this;*/
+
+        // Uncomment when metrics are figured out
+//      QtScroller::grabGesture(this->viewport(), QtScroller::TouchGesture);
+//      QtScrollerProperties properties = QtScroller::scroller(this->viewport())->scrollerProperties();
+//      QtScroller::scroller(this->viewport())->setScrollerProperties(properties);
 }
 
 KeepassEntryView::~KeepassEntryView(){

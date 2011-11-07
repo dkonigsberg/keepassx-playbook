@@ -9,6 +9,8 @@ INCLUDEPATH += . lib crypto plugins/interfaces export import dialogs
 
 LIBS += -L$$[QT_INSTALL_PLUGINS]/platforms -lQtOpenGL -lbbsupport
 
+DEFINES += QTSCROLLER_NO_WEBKIT
+
 MOC_DIR = ../build/moc
 UI_DIR = ../build/ui
 OBJECTS_DIR = ../build
@@ -215,6 +217,14 @@ HEADERS += keepassx.h \
            lib/tools.h \
            lib/UrlLabel.h \
            lib/WaitAnimationWidget.h \
+           lib/qtflickgesture_p.h \
+           lib/qtscroller.h \
+           lib/qtscroller_p.h \
+           lib/qtscrollerfilter_p.h \
+           lib/qtscrollerproperties.h \
+           lib/qtscrollerproperties_p.h \
+           lib/qtscrollevent.h \
+           lib/qtscrollevent_p.h \
            crypto/aes.h \
            crypto/aescpp.h \
            crypto/aes_endian.h \
@@ -278,6 +288,11 @@ SOURCES += main.cpp \
            lib/tools.cpp \
            lib/UrlLabel.cpp \
            lib/WaitAnimationWidget.cpp \
+           lib/qtflickgesture.cpp \
+           lib/qtscroller.cpp \
+           lib/qtscrollerfilter.cpp \
+           lib/qtscrollerproperties.cpp \
+           lib/qtscrollevent.cpp \
            crypto/aescrypt.c \
            crypto/aeskey.c \
            crypto/aes_modes.c \
@@ -350,3 +365,5 @@ RESOURCES += res/resources.qrc
 #else {
 #	message("*** lrelease not found - can't compile translation files")
 #}
+
+
